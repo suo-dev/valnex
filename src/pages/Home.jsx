@@ -273,28 +273,28 @@ export default function Home() {
             <article>
               <b>
                 <i data-count="32000">32,000</i>
-                <small> +</small>
+                <small>　+</small>
               </b>
               <span>登録学生数</span>
             </article>
             <article>
               <b>
                 <i data-count="87">87</i>
-                <small> %</small>
+                <small>　%</small>
               </b>
               <span>週次学習継続率</span>
             </article>
             <article>
               <b>
                 <i data-count="4.7">4.7</i>
-                <small> / 5</small>
+                <small>　/　5</small>
               </b>
               <span>利用満足度</span>
             </article>
             <article>
               <b>
                 <i data-count="18">18</i>
-                <small> 校</small>
+                <small>　校</small>
               </b>
               <span>連携・導入大学</span>
             </article>

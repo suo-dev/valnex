@@ -76,6 +76,7 @@ export default function Partners() {
           {benefits.map(([n, title, text]) => (
             <article key={n}>
               <span>{n}</span>
+              <img src={`/valnex/src/assets/partner_benefits/${n}.png`} alt={`${title}の画像`} />
               <h3>{title}</h3>
               <p>{text}</p>
             </article>

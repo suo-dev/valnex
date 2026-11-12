@@ -1,4 +1,4 @@
-const icons = { learn: "✦", team: "♜", community: "◎", reward: "↗" };
+const icons = { learn: "　", team: "　", community: "　", reward: "　" };
 export default function ServiceCard({
   index,
   icon,
@@ -12,6 +12,7 @@ export default function ServiceCard({
         <span>0{index}</span>
         <b>{icons[icon]}</b>
       </div>
+      <img src={`/valnex/src/assets/experience/0${index}.png`} alt="${title}の画像" />
       <h3>{title}</h3>
       <p>{text}</p>
       <a href="#/service">
