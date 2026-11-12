@@ -1,4 +1,6 @@
 import Button from "../components/ui/Button";
+import { useEffect, useRef } from "react";
+import topPageBackground from "../assets/topPageBackground.jpg";
 
 const features = [
   {
@@ -108,23 +110,60 @@ function Mockup({ type }) {
 }
 
 export default function Service() {
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    const hero = heroRef.current;
+    if (!hero) return;
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)",
+    ).matches;
+    const update = () => {
+      const rect = hero.getBoundingClientRect();
+      const range = Math.max(hero.offsetHeight - window.innerHeight, 1);
+      const progress = Math.min(Math.max(-rect.top / range, 0), 1);
+      hero.style.setProperty("--hero-shift", `${progress * 12}%`);
+      hero.querySelectorAll("[data-sequence]").forEach((item) => {
+        const step = Number(item.dataset.sequence);
+        const amount = reducedMotion
+          ? 1
+          : Math.min(Math.max((progress - step * 0.22) / 0.18, 0), 1);
+        item.style.opacity = amount;
+        item.style.transform = `translateY(${(1 - amount) * 30}px)`;
+      });
+    };
+    update();
+    window.addEventListener("scroll", update, { passive: true });
+    window.addEventListener("resize", update);
+    return () => {
+      window.removeEventListener("scroll", update);
+      window.removeEventListener("resize", update);
+    };
+  }, []);
+
   return (
     <>
-      <section className="page-hero service-hero">
-        <div className="container">
-          <p className="eyebrow">SERVICE</p>
-          <h1>
-            学ぶことを、
-            <br />
-            <em>もっと自分らしく。</em>
-          </h1>
-          <p>
-            ひとりで続ける難しさを、楽しさとつながりに変える。32,000人の学生が利用する、VALNEX
-            の4つの学習体験を紹介します。
-          </p>
-          <span className="status-pill">
-            学生プランは無料でご利用いただけます
-          </span>
+      <section className="page-hero service-hero" ref={heroRef}>
+        <div className="service-hero-sticky">
+          <div
+            className="service-hero-background"
+            style={{ backgroundImage: `url(${topPageBackground})` }}
+          />
+          <div className="service-hero-content container">
+            <p className="eyebrow">SERVICE</p>
+            <h1>
+              <span data-sequence="0">学ぶことを</span>
+              <br />
+              <em data-sequence="1">もっと新しく</em>
+            </h1>
+            <p data-sequence="2">
+              ひとりで続ける難しさを、楽しさとつながりに変える。32,000人の学生が利用する、VALNEX
+              の4つの学習体験を紹介します。
+            </p>
+            <span className="status-pill" data-sequence="2">
+              学生プランは無料でご利用いただけます
+            </span>
+          </div>
         </div>
       </section>
       <section className="features-wrap">

@@ -2841,6 +2841,87 @@ body {
 .brand-symbol {
   color: #fff;
 }
+
+.service-hero {
+  position: relative;
+  min-height: 190vh;
+  padding: 0;
+  color: #fff;
+  background: var(--primary-deep);
+}
+.service-hero-sticky {
+  position: sticky;
+  top: 76px;
+  min-height: calc(100vh - 76px);
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+}
+.service-hero-background {
+  position: absolute;
+  inset: -5% -12%;
+  background-position: calc(50% + var(--hero-shift, 0%)) center;
+  background-size: cover;
+  will-change: background-position;
+}
+.service-hero-sticky::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgb(10 32 61 / 88%),
+    rgb(10 32 61 / 48%) 65%,
+    rgb(10 32 61 / 28%)
+  );
+}
+.service-hero-content {
+  position: relative;
+  z-index: 1;
+  padding-block: 64px;
+}
+.service-hero-content h1 span,
+.service-hero-content h1 em {
+  display: inline-block;
+}
+.service-hero-content h1 em {
+  color: #a6e2d3;
+}
+.service-hero-content [data-sequence] {
+  will-change: opacity, transform;
+}
+.service-hero-content > p:not(.eyebrow) {
+  max-width: 680px;
+  color: #f4f8fc;
+  line-height: 1.9;
+}
+.service-hero-content .eyebrow {
+  color: #a6e2d3;
+}
+@media (max-width: 700px) {
+  .service-hero-sticky {
+    top: 65px;
+    min-height: calc(100svh - 65px);
+  }
+  .service-hero-background {
+    inset: -4% -28%;
+  }
+  .service-hero-sticky::after {
+    background: linear-gradient(
+      90deg,
+      rgb(10 32 61 / 82%),
+      rgb(10 32 61 / 52%)
+    );
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .service-hero {
+    min-height: 100vh;
+  }
+  .service-hero-background {
+    inset: 0;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   .orbital-ring-one,
   .orbital-ring-two {
