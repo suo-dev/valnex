@@ -1,6 +1,5 @@
 import Button from "../components/ui/Button";
 import { useEffect, useRef } from "react";
-import service from "/valnex/public/assets/backgrounds/service.png";
 
 const features = [
   {
@@ -147,7 +146,7 @@ export default function Service() {
         <div className="service-hero-sticky">
           <div
             className="service-hero-background"
-            style={{ backgroundImage: `url(${service})` }}
+            style={{ backgroundImage: `url(/assets/backgrounds/service.png)` }}
           />
           <div className="service-hero-content container">
             <p className="eyebrow">SERVICE</p>
