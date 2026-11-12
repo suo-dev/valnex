@@ -146,7 +146,7 @@ export default function Service() {
         <div className="service-hero-sticky">
           <div
             className="service-hero-background"
-            style={{ backgroundImage: `url(/assets/backgrounds/service.png)` }}
+            style={{ backgroundImage: `url(${import.meta.env.BASE_URL}assets/backgrounds/service.png)` }}
           />
           <div className="service-hero-content container">
             <p className="eyebrow">SERVICE</p>
