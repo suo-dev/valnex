@@ -108,6 +108,7 @@ h1 em {
   letter-spacing: 0.04em;
 }
 .brand-symbol {
+  color: #fff;
   width: 28px;
   height: 28px;
   display: grid;
@@ -2836,6 +2837,9 @@ body {
 }
 .accordion article.is-open button i {
   background: #b7ded2;
+}
+.brand-symbol {
+  color: #fff;
 }
 @media (prefers-reduced-motion: reduce) {
   .orbital-ring-one,

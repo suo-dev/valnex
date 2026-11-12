@@ -22,7 +22,10 @@ function routeFromHash() {
 export default function App() {
   const [route, setRoute] = useState(routeFromHash);
   useEffect(() => {
-    const updateRoute = () => setRoute(routeFromHash());
+    const updateRoute = () => {
+      setRoute(routeFromHash());
+      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+    };
     window.addEventListener("hashchange", updateRoute);
     return () => window.removeEventListener("hashchange", updateRoute);
   }, []);
