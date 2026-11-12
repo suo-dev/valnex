@@ -12,7 +12,7 @@ export default function ServiceCard({
         <span>0{index}</span>
         <b>{icons[icon]}</b>
       </div>
-      <img src={`/valnex/src/assets/experience/0${index}.png`} alt="${title}の画像" />
+      <img src={`/valnex/public/assets/experience/0${index}.png`} alt="${title}の画像" />
       <h3>{title}</h3>
       <p>{text}</p>
       <a href="#/service">

@@ -1,6 +1,6 @@
 import Button from "../components/ui/Button";
 import { useEffect, useRef } from "react";
-import service from "../assets/backgrounds/service.png";
+import service from "/valnex/public/assets/backgrounds/service.png";
 
 const features = [
   {
