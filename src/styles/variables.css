@@ -1,0 +1,34 @@
+:root {
+  --primary: #174ea6;
+  --primary-deep: #102f63;
+  --secondary: #16705b;
+  --accent: #087f8c;
+  --accent-bright: #36b7bd;
+  --background: #f4f6f8;
+  --surface: #ffffff;
+  --surface-cool: #eaf1f7;
+  --text: #101b2c;
+  --muted: #536276;
+  --border: #cbd5e1;
+  --footer: #0b1b32;
+  --footer-text: #f8fafc;
+  --footer-muted: #c3d0df;
+  --status-success: #176b50;
+  --navy: #10233e;
+  --blue: #2563eb;
+  --sky: #eaf4ff;
+  --ink: #172033;
+  --paper: #fff;
+  --off-white: #f7faff;
+  --mint: #b7ded2;
+  --violet: #5d62a8;
+  --obsidian: #0b1b32;
+  --signal: #36b7bd;
+  --cloud: #f4f6f8;
+  --ink-v2: #101b2c;
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --max-width: 1160px;
+  --sans:
+    Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont,
+    "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
+}
