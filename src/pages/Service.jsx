@@ -1,6 +1,6 @@
 import Button from "../components/ui/Button";
 import { useEffect, useRef } from "react";
-import topPageBackground from "../assets/topPageBackground.jpg";
+import service from "../assets/service.jpg";
 
 const features = [
   {
@@ -147,7 +147,7 @@ export default function Service() {
         <div className="service-hero-sticky">
           <div
             className="service-hero-background"
-            style={{ backgroundImage: `url(${topPageBackground})` }}
+            style={{ backgroundImage: `url(${service})` }}
           />
           <div className="service-hero-content container">
             <p className="eyebrow">SERVICE</p>
