@@ -20,9 +20,9 @@ const benefits = [
 ];
 
 const benefitImageDimensions = {
-  1: [1536, 1024],
-  2: [526, 265],
-  3: [1800, 1013],
+  "01": [1536, 1024],
+  "02": [526, 265],
+  "03": [1800, 1013],
 };
 
 export default function Partners() {
@@ -87,8 +87,8 @@ export default function Partners() {
                 alt={`${title}の画像`}
                 loading="lazy"
                 decoding="async"
-                width={benefitImageDimensions[n][0]}
-                height={benefitImageDimensions[n][1]}
+                width={benefitImageDimensions[n]?.[0] ?? 1200}
+                height={benefitImageDimensions[n]?.[1] ?? 800}
               />
               <h3>{title}</h3>
               <p>{text}</p>
