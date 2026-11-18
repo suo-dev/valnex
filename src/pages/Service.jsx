@@ -149,7 +149,7 @@ export default function Service() {
             style={{ backgroundImage: `url(${import.meta.env.BASE_URL}assets/optimized/backgrounds/service.webp)` }}
           />
           <div className="service-hero-content container">
-            <p className="eyebrow">SERVICE</p>
+            <p className="eyebrow" data-sequence="0">SERVICE</p>
             <h1>
               <span data-sequence="0">学ぶことを</span>
               <br />

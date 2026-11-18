@@ -5,18 +5,28 @@ export default function ScrollExperience() {
     const reducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
     ).matches;
+    let frame = 0;
     const updateProgress = () => {
-      const maximum =
-        document.documentElement.scrollHeight - window.innerHeight;
-      document.documentElement.style.setProperty(
-        "--scroll-progress",
-        maximum > 0 ? window.scrollY / maximum : 0,
-      );
+      if (frame) return;
+      frame = window.requestAnimationFrame(() => {
+        frame = 0;
+        const maximum =
+          document.documentElement.scrollHeight - window.innerHeight;
+        document.documentElement.style.setProperty(
+          "--scroll-progress",
+          maximum > 0 ? window.scrollY / maximum : 0,
+        );
+      });
     };
     updateProgress();
     window.addEventListener("scroll", updateProgress, { passive: true });
+    window.addEventListener("resize", updateProgress);
     if (reducedMotion)
-      return () => window.removeEventListener("scroll", updateProgress);
+      return () => {
+        window.removeEventListener("scroll", updateProgress);
+        window.removeEventListener("resize", updateProgress);
+        window.cancelAnimationFrame(frame);
+      };
 
     const elements = [...document.querySelectorAll("[data-reveal]")];
     const observer = new IntersectionObserver(
@@ -59,6 +69,8 @@ export default function ScrollExperience() {
     });
     return () => {
       window.removeEventListener("scroll", updateProgress);
+      window.removeEventListener("resize", updateProgress);
+      window.cancelAnimationFrame(frame);
       observer.disconnect();
       counterObserver.disconnect();
     };

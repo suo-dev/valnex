@@ -1516,10 +1516,12 @@ body {
   position: absolute;
   bottom: -1px;
   left: 0;
-  width: calc(var(--scroll-progress, 0) * 100%);
+  width: 100%;
   height: 2px;
   background: var(--signal);
-  transition: width 0.08s linear;
+  transform: scaleX(var(--scroll-progress, 0));
+  transform-origin: left center;
+  will-change: transform;
 }
 .site-header {
   border-color: #e9eaed;
@@ -2939,6 +2941,8 @@ body {
   color: #a6e2d3;
 }
 .service-hero-content [data-sequence] {
+  opacity: 0;
+  transform: translateY(30px);
   will-change: opacity, transform;
 }
 .service-hero-content > p:not(.eyebrow) {
