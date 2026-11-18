@@ -6,12 +6,12 @@ export default function Footer() {
           <a className="brand-light brand" href="#/home">
             <img
               className="brand-icon"
-              src="/assets/logo/valnex_icon_inv.png"
+              src="/valnex/assets/logo/valnex_icon_inv.png"
               alt=""
             />
             <img
               className="brand-wordmark"
-              src="/assets/logo/valnex_text_inv.png"
+              src="/valnex/assets/logo/valnex_text_inv.png"
               alt="VALNEX"
             />
           </a>

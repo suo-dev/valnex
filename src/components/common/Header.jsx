@@ -16,12 +16,12 @@ export default function Header({ currentPage }) {
         >
           <img
             className="brand-icon"
-            src="/assets/logo/valnex_icon.png"
+            src="/valnex/assets/logo/valnex_icon.png"
             alt=""
           />
           <img
             className="brand-wordmark"
-            src="/assets/logo/valnex_text.png"
+            src="/valnex/assets/logo/valnex_text.png"
             alt="VALNEX"
           />
         </a>
