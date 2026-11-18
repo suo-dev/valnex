@@ -14,14 +14,22 @@ export default function Header({ currentPage }) {
           onClick={close}
           aria-label="VALNEX ホーム"
         >
-          <span className="brand-symbol">V</span>
-          <span>VALNEX</span>
+          <img
+            className="brand-icon"
+            src="/assets/logo/valnex_icon.png"
+            alt=""
+          />
+          <img
+            className="brand-wordmark"
+            src="/assets/logo/valnex_text.png"
+            alt="VALNEX"
+          />
         </a>
         <button
           aria-controls="main-navigation"
           aria-expanded={isOpen}
           className="menu-button"
-          onClick={() => setIsOpen((open)   => !open)}
+          onClick={() => setIsOpen((open) => !open)}
           type="button"
         >
           <span className="sr-only">メニューを開く</span>

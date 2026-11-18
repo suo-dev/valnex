@@ -4,13 +4,16 @@ export default function Footer() {
       <div className="container footer-top">
         <div>
           <a className="brand-light brand" href="#/home">
-            <span className="brand-symbol">V</span>
-            <span style={{
-              color: "#FFFFFF",
-              WebkitTextFillColor: "#FFFFFF"
-            }}>
-              VALNEX
-            </span>
+            <img
+              className="brand-icon"
+              src="/assets/logo/valnex_icon_inv.png"
+              alt=""
+            />
+            <img
+              className="brand-wordmark"
+              src="/assets/logo/valnex_text_inv.png"
+              alt="VALNEX"
+            />
           </a>
           <p>学生の努力を、新しい価値に変える。</p>
         </div>
