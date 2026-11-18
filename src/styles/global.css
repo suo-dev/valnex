@@ -2777,6 +2777,91 @@ body {
 .scroll-meter {
   background: var(--accent-bright);
 }
+
+.scroll-story-hero {
+  position: relative;
+  min-height: 190vh;
+  padding: 0;
+  overflow: clip;
+  color: #fff;
+  background: var(--primary-deep);
+}
+.scroll-story-sticky {
+  position: sticky;
+  top: 76px;
+  min-height: calc(100vh - 76px);
+  display: grid;
+  align-items: center;
+  overflow: hidden;
+  isolation: isolate;
+}
+.scroll-story-background {
+  position: absolute;
+  z-index: -2;
+  inset: -7% -16%;
+  background-position: calc(50% + var(--hero-shift, 0%)) center;
+  background-size: cover;
+  will-change: background-position;
+}
+.scroll-story-sticky::after {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  content: "";
+  background: linear-gradient(
+    90deg,
+    rgb(10 32 61 / 88%),
+    rgb(10 32 61 / 56%) 68%,
+    rgb(10 32 61 / 34%)
+  );
+}
+.scroll-story-content {
+  position: relative;
+  z-index: 1;
+  padding-block: 64px;
+}
+.scroll-story-content .eyebrow {
+  color: #a6e2d3;
+}
+.scroll-story-content h1 {
+  margin-bottom: 27px;
+  font-size: clamp(3.2rem, 6.4vw, 7.2rem);
+  font-weight: 700;
+  line-height: 1.06;
+  letter-spacing: -0.075em;
+}
+.scroll-story-content h1 span {
+  display: block;
+  width: fit-content;
+  max-width: 100%;
+}
+.scroll-story-content h1 .scroll-story-accent {
+  color: #a6e2d3;
+}
+.scroll-story-content [data-sequence] {
+  opacity: 0;
+  transform: translateY(30px);
+  will-change: opacity, transform;
+}
+.scroll-story-after {
+  max-width: 720px;
+}
+.scroll-story-after > p {
+  max-width: 680px;
+  margin-bottom: 0;
+  color: #f4f8fc;
+  line-height: 1.9;
+}
+.scroll-story-after .v2-hero-actions {
+  margin-top: 32px;
+}
+.scroll-story-after .v2-arrow-link {
+  color: #fff;
+}
+.scroll-story-after .v2-arrow-link span {
+  display: inline-block;
+}
+
 .brand {
   color: var(--primary-deep);
 }
@@ -2902,6 +2987,11 @@ body {
   color: #fff;
   background: var(--primary-deep);
 }
+.scroll-story-hero.service-hero,
+.scroll-story-hero.about-hero,
+.scroll-story-hero.partners-hero {
+  background: var(--primary-deep);
+}
 .service-hero-sticky {
   position: sticky;
   top: 76px;
@@ -2954,6 +3044,29 @@ body {
   color: #a6e2d3;
 }
 @media (max-width: 700px) {
+  .scroll-story-hero {
+    min-height: 190svh;
+  }
+  .scroll-story-sticky {
+    top: 65px;
+    min-height: calc(100svh - 65px);
+  }
+  .scroll-story-background {
+    inset: -6% -28%;
+  }
+  .scroll-story-sticky::after {
+    background: linear-gradient(
+      90deg,
+      rgb(10 32 61 / 86%),
+      rgb(10 32 61 / 58%)
+    );
+  }
+  .scroll-story-content h1 {
+    font-size: clamp(2.65rem, 11vw, 4.8rem);
+  }
+  .scroll-story-after .v2-hero-actions {
+    align-items: flex-start;
+  }
   .service-hero-sticky {
     top: 65px;
     min-height: calc(100svh - 65px);
@@ -2970,6 +3083,12 @@ body {
   }
 }
 @media (prefers-reduced-motion: reduce) {
+  .scroll-story-hero {
+    min-height: 100vh;
+  }
+  .scroll-story-background {
+    inset: 0;
+  }
   .service-hero {
     min-height: 100vh;
   }

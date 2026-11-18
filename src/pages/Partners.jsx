@@ -1,5 +1,6 @@
 import Button from "../components/ui/Button";
 import CycleDiagram from "../components/ui/CycleDiagram";
+import ScrollStoryHero from "../components/common/ScrollStoryHero";
 
 const benefits = [
   [
@@ -28,21 +29,18 @@ const benefitImageDimensions = {
 export default function Partners() {
   return (
     <>
-      <section className="page-hero partners-hero">
-        <div className="container">
-          <p className="eyebrow">PARTNERS</p>
-          <h1>
-            学生の可能性を、
-            <br />
-            <em>ともにひらく。</em>
-          </h1>
-          <p>
-            VALNEX
-            の賛助企業制度は、学生の学びを応援したい企業の皆さまと、新しい成長の循環をつくるパートナーシップです。
-          </p>
-          <Button href="#/contact">賛助企業について相談する</Button>
-        </div>
-      </section>
+      <ScrollStoryHero
+        eyebrow="PARTNERS"
+        lines={[
+          { text: "学生の可能性を、" },
+          { text: "ともにひらく。", accent: true },
+        ]}
+        description="VALNEX の賛助企業制度は、学生の学びを応援したい企業の皆さまと、新しい成長の循環をつくるパートナーシップです。"
+        background="partners"
+        className="partners-hero"
+      >
+        <Button href="#/contact">賛助企業について相談する</Button>
+      </ScrollStoryHero>
       <section className="section container partner-intro">
         <div>
           <p className="eyebrow">PARTNERSHIP</p>

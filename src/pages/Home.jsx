@@ -2,6 +2,7 @@ import Button from "../components/ui/Button";
 import CycleDiagram from "../components/ui/CycleDiagram";
 import ServiceCard from "../components/ui/ServiceCard";
 import Accordion from "../components/ui/Accordion";
+import ScrollStoryHero from "../components/common/ScrollStoryHero";
 
 const services = [
   [
@@ -51,64 +52,25 @@ const faqs = [
 export default function Home() {
   return (
     <>
-      <section className="v2-hero">
-        <div className="v2-hero-glow" />
-        <div className="v2-hero-grain" />
-        <div className="container v2-hero-inner">
-          <div className="v2-hero-copy" data-reveal>
-            <p className="v2-kicker">VALUE × NEXT</p>
-            <h1>
-              学ぶよろこびを、
-              <br />
-              <span>キャンパスに。</span>
-            </h1>
-            <p>
-              努力が続く仕組みを、もっと自由に。
-              <br />
-              VALNEX
-              は大学生の「やってみたい」を、仲間とともに育てる学習プラットフォームです。
-            </p>
-            <div className="v2-hero-actions">
-              <Button href="#/service" className="button-signal">
-                サービスを知る
-              </Button>
-              <a href="#/partners" className="v2-arrow-link">
-                賛助企業の方へ <span>↗</span>
-              </a>
-            </div>
-          </div>
-          <div
-            className="v2-orbital"
-            aria-label="VALNEXサービスのイメージ"
-            data-reveal
-          >
-            <div className="orbital-ring orbital-ring-one" />
-            <div className="orbital-ring orbital-ring-two" />
-            <div className="orbital-core">
-              <span>LEARN</span>
-              <b>✦</b>
-              <span>TOGETHER</span>
-            </div>
-            <div className="orbital-card card-hours">
-              <small>WEEKLY FOCUS</small>
-              <strong>
-                12<span>h</span>40<span>m</span>
-              </strong>
-              <i>↑ 18%</i>
-            </div>
-            <div className="orbital-card card-rank">
-              <small>TEAM RANK</small>
-              <strong>#03</strong>
-              <span>out of 128</span>
-            </div>
-            <div className="orbital-pill">7 days in a row</div>
-          </div>
+      <ScrollStoryHero
+        eyebrow="VALUE × NEXT"
+        lines={[
+          { text: "学ぶよろこびを、" },
+          { text: "キャンパスに。", accent: true },
+        ]}
+        description={<>努力が続く仕組みを、もっと自由に。<br />VALNEX は大学生の「やってみたい」を、仲間とともに育てる学習プラットフォームです。</>}
+        background="home"
+        className="home-story-hero"
+      >
+        <div className="v2-hero-actions">
+          <Button href="#/service" className="button-signal">
+            サービスを知る
+          </Button>
+          <a href="#/partners" className="v2-arrow-link">
+            賛助企業の方へ <span>↗</span>
+          </a>
         </div>
-        <div className="v2-scroll-cue">
-          <i />
-          <span>SCROLL TO EXPLORE</span>
-        </div>
-      </section>
+      </ScrollStoryHero>
       <section className="v2-manifesto">
         <div className="container">
           <p className="v2-kicker" data-reveal>

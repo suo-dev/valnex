@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import MainLayout from "./layouts/MainLayout";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -21,14 +21,30 @@ function routeFromHash() {
 
 export default function App() {
   const [route, setRoute] = useState(routeFromHash);
-  useEffect(() => {
+  useLayoutEffect(() => {
+    if ("scrollRestoration" in window.history) {
+      window.history.scrollRestoration = "manual";
+    }
+
     const updateRoute = () => {
       setRoute(routeFromHash());
-      window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
     };
     window.addEventListener("hashchange", updateRoute);
     return () => window.removeEventListener("hashchange", updateRoute);
   }, []);
+
+  useLayoutEffect(() => {
+    const root = document.documentElement;
+    const previousScrollBehavior = root.style.scrollBehavior;
+
+    // Override the site-wide smooth scrolling for page changes only.
+    root.style.scrollBehavior = "auto";
+    window.scrollTo(0, 0);
+    root.scrollTop = 0;
+    document.body.scrollTop = 0;
+    root.style.scrollBehavior = previousScrollBehavior;
+  }, [route]);
+
   const Page = pages[route];
   return (
     <MainLayout currentPage={route}>

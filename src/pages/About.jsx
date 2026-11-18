@@ -1,24 +1,20 @@
 import Button from "../components/ui/Button";
+import ScrollStoryHero from "../components/common/ScrollStoryHero";
 
 export default function About() {
   return (
     <>
-      <section className="page-hero about-hero">
-        <div className="container">
-          <p className="eyebrow">ABOUT VALNEX</p>
-          <h1>
-            努力が報われる
-            <br />
-            学びの景色を、
-            <br />
-            <em>あたりまえに。</em>
-          </h1>
-          <p>
-            VALNEX は Value ×
-            Next。学生の中にある努力を、次の価値へつなげるために生まれました。
-          </p>
-        </div>
-      </section>
+      <ScrollStoryHero
+        eyebrow="ABOUT VALNEX"
+        lines={[
+          { text: "努力が報われる" },
+          { text: "学びの景色を、" },
+          { text: "あたりまえに。", accent: true },
+        ]}
+        description="VALNEX は Value × Next。学生の中にある努力を、次の価値へつなげるために生まれました。"
+        background="about"
+        className="about-hero"
+      />
       <section className="section container story-grid">
         <div>
           <p className="eyebrow">WHY WE EXIST</p>
