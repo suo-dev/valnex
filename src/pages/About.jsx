@@ -61,19 +61,19 @@ export default function About() {
         <div className="vision-cards">
           <article>
             <span>01</span>
-            <img src={`${import.meta.env.BASE_URL}assets/vision/01.png`} alt="楽しいから続く" />
+            <img src={`${import.meta.env.BASE_URL}assets/optimized/vision/01.webp`} alt="楽しいから続く" loading="lazy" decoding="async" width="781" height="418" />
             <h3>楽しいから続く</h3>
             <p>達成感が次の行動を呼ぶ、前向きな学習体験をつくります。</p>
           </article>
           <article>
             <span>02</span>
-            <img src={`${import.meta.env.BASE_URL}assets/vision/02.png`} alt="仲間がいるから進める" />
+            <img src={`${import.meta.env.BASE_URL}assets/optimized/vision/02.webp`} alt="仲間がいるから進める" loading="lazy" decoding="async" width="952" height="511" />
             <h3>仲間がいるから進める</h3>
             <p>孤独になりがちな努力を、応援し合える挑戦に変えます。</p>
           </article>
           <article>
             <span>03</span>
-            <img src={`${import.meta.env.BASE_URL}assets/vision/03.png`} alt="価値になるから誇れる" />
+            <img src={`${import.meta.env.BASE_URL}assets/optimized/vision/03.webp`} alt="価値になるから誇れる" loading="lazy" decoding="async" width="651" height="417" />
             <h3>価値になるから誇れる</h3>
             <p>学びと貢献を可視化し、社会との接点につなげます。</p>
           </article>

@@ -19,6 +19,7 @@ export default function Header({ currentPage }) {
             src="/valnex/assets/logo/valnex_icon.png"
             alt=""
           />
+          <div style={{ height: "30px", width: "1px", background: "#1E2F42", margin: "6px 0 0 3px" }} />
           <img
             className="brand-wordmark"
             src="/valnex/assets/logo/valnex_text.png"

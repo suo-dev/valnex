@@ -9,6 +9,7 @@ export default function Footer() {
               src="/valnex/assets/logo/valnex_icon_inv.png"
               alt=""
             />
+            <div style={{ height: "30px", width: "1px", background: "#FFFFFF", margin: "6px 0 0 3px" }} />
             <img
               className="brand-wordmark"
               src="/valnex/assets/logo/valnex_text_inv.png"

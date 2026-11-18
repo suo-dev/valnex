@@ -19,6 +19,12 @@ const benefits = [
   ],
 ];
 
+const benefitImageDimensions = {
+  1: [1536, 1024],
+  2: [526, 265],
+  3: [1800, 1013],
+};
+
 export default function Partners() {
   return (
     <>
@@ -76,7 +82,14 @@ export default function Partners() {
           {benefits.map(([n, title, text]) => (
             <article key={n}>
               <span>{n}</span>
-              <img src={`${import.meta.env.BASE_URL}assets/partner_benefits/${n}.png`} alt={`${title}の画像`} />
+              <img
+                src={`${import.meta.env.BASE_URL}assets/optimized/partner_benefits/${n}.webp`}
+                alt={`${title}の画像`}
+                loading="lazy"
+                decoding="async"
+                width={benefitImageDimensions[n][0]}
+                height={benefitImageDimensions[n][1]}
+              />
               <h3>{title}</h3>
               <p>{text}</p>
             </article>
