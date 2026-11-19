@@ -62,6 +62,10 @@ h1 em {
   color: var(--blue);
   font-style: normal;
 }
+h2 em {
+  color: var(--blue);
+  font-style: normal;
+}
 .eyebrow {
   margin-bottom: 18px;
   color: var(--blue);

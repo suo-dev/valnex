@@ -13,11 +13,11 @@ export default function Contact() {
       <div className="container contact-grid">
         <div>
           <p className="eyebrow">CONTACT</p>
-          <h1>
+          <h2>
             一緒に、学びの
             <br />
             <em>次の景色を。</em>
-          </h1>
+          </h2>
           <p>
             サービスについて、賛助企業制度について、そのほかのご相談もお気軽にお寄せください。
           </p>
