@@ -119,7 +119,6 @@ export default function Service() {
         ]}
         description="ひとりで続ける難しさを、楽しさとつながりに変える。32,000人の学生が利用する、VALNEX の4つの学習体験を紹介します。"
         background="service"
-        className="service-hero"
       >
         <span className="status-pill">
           学生プランは無料でご利用いただけます

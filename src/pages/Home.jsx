@@ -2,7 +2,7 @@ import Button from "../components/ui/Button";
 import CycleDiagram from "../components/ui/CycleDiagram";
 import ServiceCard from "../components/ui/ServiceCard";
 import Accordion from "../components/ui/Accordion";
-import ScrollStoryHero from "../components/common/ScrollStoryHero";
+import HomeScrollHero from "../components/common/HomeScrollHero";
 
 const services = [
   [
@@ -52,25 +52,7 @@ const faqs = [
 export default function Home() {
   return (
     <>
-      <ScrollStoryHero
-        eyebrow="VALUE × NEXT"
-        lines={[
-          { text: "学ぶよろこびを、" },
-          { text: "キャンパスに。", accent: true },
-        ]}
-        description={<>努力が続く仕組みを、もっと自由に。<br />VALNEX は大学生の「やってみたい」を、仲間とともに育てる学習プラットフォームです。</>}
-        background="home"
-        className="home-story-hero"
-      >
-        <div className="v2-hero-actions">
-          <Button href="#/service" className="button-signal">
-            サービスを知る
-          </Button>
-          <a href="#/partners" className="v2-arrow-link">
-            賛助企業の方へ <span>↗</span>
-          </a>
-        </div>
-      </ScrollStoryHero>
+      <HomeScrollHero />
       <section className="v2-manifesto">
         <div className="container">
           <p className="v2-kicker" data-reveal>
