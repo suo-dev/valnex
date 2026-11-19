@@ -68,8 +68,8 @@ export default function Home() {
               <p className="v2-large-copy">
                 大学生には、選べる時間がある。だからこそ、学びを続けることは難しくなる。
               </p>
-              <p>
-                VALNEX
+              <p className="v2-large-copy">
+                <span className="accent">VALNEX</span>
                 は、勉強を個人の意志だけに委ねません。小さな達成、仲間の存在、誰かの役に立つ実感。そのすべてを、続けたくなる理由に変えていきます。
               </p>
             </div>

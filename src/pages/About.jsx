@@ -28,9 +28,9 @@ export default function About() {
           <p className="lead">
             大学は、自分で未来を選べる場所です。けれど自由が増えるほど、学ぶことは後回しになりやすい。私たちは、その状況を学生の意志の弱さだとは考えません。
           </p>
-          <p className="body-copy">
-            学びに向かう気持ちは、誰かとのつながりや、努力が認められる手ごたえから生まれます。VALNEX
-            は、そのきっかけをデザインします。
+          <p className="v2-large-copy">
+            学びに向かう気持ちは、誰かとのつながりや、努力が認められる手ごたえから生まれます。<span className="accent">VALNEX</span>
+              は、そのきっかけをデザインします。
           </p>
         </div>
       </section>

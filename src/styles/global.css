@@ -1627,6 +1627,13 @@ body {
   font-weight: 600;
   line-height: 1.65;
 }
+.v2-large-copy .accent {
+  color: var(--blue);
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.65;
+  padding: 0 2px;
+}
 .v2-story {
   position: relative;
   padding-block: 110px;
