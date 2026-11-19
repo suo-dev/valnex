@@ -5,5 +5,5 @@
 ## URL
 
 ```bash
-https://suo-dev.github.io/valnex/#/home
+https://suo-dev.github.io/valnex/
 ```
